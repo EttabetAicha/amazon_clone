@@ -12,6 +12,13 @@ header{
   display: flex;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
+.navOpenBtn,
+ .navCloseBtn {
+  display: none;
+ font-size: 30px;}
+
+
+
 .search{
   display: flex;
   align-items: center;
@@ -62,6 +69,8 @@ header .menu ul{
   border-left: 2px solid #334155;
   padding-left: 20px;
 }
+
+
 /*page index*/
 .products-type{
   margin: 20px 50px;
@@ -294,7 +303,7 @@ aside .list_star {
 }
 
 input[type="checkbox"]:checked::before {
-  content: "\2713";
+  content: "\2714";
   background-color: #19b90b;
   display: block;
   width: 20px; 
@@ -339,12 +348,13 @@ input[type="checkbox"]:checked::before {
     font-weight: bolder;
     padding: 5px;
     border: none;
+    outline: none;
   
 }
 /*detail page*/
 .produit-detail{
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns:repeat(3, 1fr);
   margin: 20px 50px;
   grid-column-gap: 40px;
 }
@@ -679,7 +689,6 @@ h4{
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background-color: #707070;
   margin-right: 10px;
   margin-bottom: 19px;
 
@@ -739,7 +748,7 @@ input[type="checkbox"] {
 }
 
 input[type="checkbox"]:checked::before {
-  content: "\2713";
+  content: "\2714";
   background-color: #19b90b;
   display: block;
   width: 20px; 
@@ -875,7 +884,200 @@ input[type="checkbox"]:checked::before {
 }
 
 
+@media (max-width: 768px) {
+  header .search {
+      display: none;
+  }
 
+  header nav {
+      left: -100%;
+      max-width: 100%;
+      padding-top: 0;
+  }
+
+  nav ul {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      height: 100%;
+      max-width: 280px;
+      width: 100%;
+      padding-top: 100px;
+      row-gap: 30px;
+      flex-direction: column;
+      background-color: rgb(255, 136, 0);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      transition: all 0.4s ease;
+      z-index: 100;
+  }
+
+  nav.openNav ul {
+      right: 0;
+  }
+
+  nav .navOpenBtn {
+      display: block;
+      color: #fff;
+      font-size: 20px;
+      cursor: pointer;
+  }
+
+  nav .navCloseBtn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      color: #fff;
+      font-size: 20px;
+      cursor: pointer;
+  }
+  .navOpenBtn,
+  .navCloseBtn {
+    display: block;
+  }
+}
+
+
+@media only screen and (max-width: 600px){
+ 
+  .products-type ul li{
+      height: 26px;
+      padding: 14px;
+      display: flex;
+      align-items: center;
+  }
+   .products-type .slide img{
+     width: 400px;
+     height: 400px;
+     margin-left: -100px;
+     
+   } 
+   .border-left{
+    border-left: none;
+  }
+  h2{
+      font-size: 24px;
+  }
+  .products-type{
+      grid-template-columns: 100%;
+  }
+  .list-products{
+      grid-template-columns: 100%;
+  }
+  .menu img{
+      width: 35px;
+  }
+  .menu{
+      display: block;
+      position: relative;
+  }
+  .container {
+    display: block; 
+    margin: 20px 10px; 
+  }
+
+  aside h3 {
+    font-size: 20px; 
+  }
+
+  aside .filter ul li {
+    font-size: 16px; 
+  }
+
+  aside .range {
+    width: 100%; 
+    margin: 10px 0; 
+  }
+  .produit-detail {
+    grid-template-columns: 1fr; 
+    margin: 20px 10px; 
+  }
+
+  .more {
+    margin: 0 0 0 10px; 
+  }
+
+  .review-detail {
+    display: block; 
+    margin: 20px 10px;
+  }
+  .desc-pro .sous-desc {
+   display: inline;
+     
+  }
+  
+  .sous-desc img{
+    width: 112%;
+    height: 253px;
+    /* padding: 22px; */
+   
+  }
+ 
+  .profil-user {
+    margin-left: -25px;
+    border-left:none;
+    padding-left: 30px;
+  }
+  .panier {
+    grid-template-columns: 1fr;
+    margin: 30px 10px; 
+  }
+  .prd_image img{
+    width: 81px;
+  }
+  .panier .count-pro {
+    gap: 6px;
+    margin-bottom: 37px;
+    margin-left: -26px;
+    /* margin-right: 63px; */
+    width: 80px;
+}
+
+  .nm {
+    font-size: 11px;
+    font-family: 'Courier New', Courier, monospace;
+   
+  }
+
+  .btn-container {
+    position: relative;
+    padding-top: 11px;
+    text-align: center; 
+    margin-bottom: 20px; 
+  }
+  .icon-panier{
+    margin-left: -26px;
+    display: flex;
+  }
+
+  .btn {
+    position: static;
+    margin: 5px 0;
+    font-size: 11px;
+    font-family: 'Courier New', Courier, monospace;
+   
+  }
+
+  .mont {
+    padding: 8px;
+    position: static;
+    text-align: center;
+    font-size: 12px;
+    font-family: 'Courier New', Courier, monospace;
+    
+  }
+
+  .react {
+    height: auto;
+    margin-top: 8px; 
+  }
+
+  .panier-list,
+  .pay-method {
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    width: 119%;
+  }
+  
+}
 
 
 

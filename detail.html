@@ -4,27 +4,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Page d'accuelle ">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&family=Open+Sans:wght@300&display=swap"rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <title></title>
 </head>
 
 <body>
     <header>
         <img src="photos/Amazon.png" alt="logo">
-        <div class="search">
-            <a href="products.html"><input type="text"placeholder="Cherchez un product, une marque ou catégorie..."></a>
+        <div class="search" id="searchIcon">
+            <a href="products.html">
+            <input type="text" placeholder="Cherchez un produit, une marque ou catégorie..."></a>
         </div>
-        <nav class="menu">
+        <nav class="menu" id="menu">
             <ul>
-                <li><a href="#">Sing In</a></li>
-                <li class="border-left"><a href="#">Create account</a></li>
-                <li><img src="photos/Morocco.png"  alt="moroco"></li>
+                <li class="navCloseBtn"><i class="uil uil-times" ></i></li>
+                <li><a href="#">Sign In</a></li>
+                <li class="border-left"><a href="#">Create Account</a></li>
+                <li><img src="photos/Morocco.png" alt="Morocco"></li>
                 <li>MAR</li>
                 <li><a href="panier.html"><img src="photos/Shopping Cart.png" class="store" alt="store"></a></li>
                 <li>5</li>
             </ul>
         </nav>
+        <i class="uil uil-bars navOpenBtn" id="navOpenBtn"></i>
     </header>
     <main>
         <section class="produit-detail">
@@ -148,7 +153,7 @@
                     details: 1. USB Connector Type for host side (PC) Options: Type A 2.Our cables are carefully crafted
                     with attention to details
                 </p>
-                <img src="photos/Modern Keyboard.jpeg" alt="keyboard">
+                <img src="photos/Modern Keyboard.jpeg" alt="keyboard" class>
             </div>
         </section>
 
@@ -378,5 +383,32 @@
     </div>
 </footer>
 </body>
-
+<script>
+    const nav = document.getElementById("menu");
+  const searchIcon = document.getElementById("searchIcon");
+  const navOpenBtn = document.getElementById("navOpenBtn");
+  const navCloseBtn = document.querySelector(".navCloseBtn");
+  
+  searchIcon.addEventListener("click", () => {
+      nav.classList.toggle("openSearch");
+      nav.classList.remove("openNav");
+      if (nav.classList.contains("openSearch")) {
+          searchIcon.classList.replace("uil-search", "uil-times");
+      } else {
+          searchIcon.classList.replace("uil-times", "uil-search");
+      }
+  });
+  
+  navOpenBtn.addEventListener("click", () => {
+      nav.classList.add("openNav");
+      nav.classList.remove("openSearch");
+      searchIcon.classList.replace("uil-times", "uil-search");
+  });
+  
+  navCloseBtn.addEventListener("click", () => {
+      nav.classList.remove("openNav");
+  });
+  
+  
+  </script>
 </html>
