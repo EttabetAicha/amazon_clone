@@ -17,8 +17,6 @@ header{
   display: none;
  font-size: 30px;}
 
-
-
 .search{
   display: flex;
   align-items: center;
@@ -72,6 +70,14 @@ header .menu ul{
 
 
 /*page index*/
+.hidden-text {
+  border-top: 1px solid #9e9e9e77;;
+  display: none;
+  margin-top: 6px;
+  font-size: medium;
+  font-weight: bold;
+  color: rgb(255, 136, 0);
+}
 .products-type{
   margin: 20px 50px;
   display: grid;

@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&family=Open+Sans:wght@300&display=swap"rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <title>Amazon</title>
+   
 </head>
 
 <body>
@@ -38,16 +39,54 @@
     <main>
         <section class="products-type">
             
-                <ul>
-                    <li><img src="photos/fashion.png" alt="fashion"><a href="product.html">Accessoires</a></li>
-                    <li><img src="photos/fashion.png" alt="fashion"><a href="product.html">Accessoires</a></li>
-                    <li><img src="photos/fashion.png" alt="fashion"><a href="product.html">Accessoires</a></li>
-                    <li><img src="photos/fashion.png" alt="fashion"><a href="product.html">Accessoires</a></li>
-                    <li><img src="photos/fashion.png" alt="fashion"><a href="product.html">Accessoires</a></li>
-                    <li><img src="photos/fashion.png" alt="fashion"><a href="product.html">Accessoires</a></li>
-                    <li><img src="photos/fashion.png" alt="fashion"><a href="product.html">Accessoires</a></li>
-                    <li><img src="photos/fashion.png" alt="fashion"><a href="product.html">Accessoires</a></li>
-                </ul>
+            <ul>
+                <li>
+                    <img src="photos/fashion.png" alt="fashion">
+                    <a href="javascript:void(0)" onclick="toggleText(1)">Accessoires</a>
+                    <br>
+                    <div id="text1" class="hidden-text">Additional information for Accessoires 1.</div>
+                </li>
+                <li>
+                    <img src="photos/fashion.png" alt="fashion">
+                    <a href="javascript:void(0)" onclick="toggleText(2)">Accessoires</a>
+                    <br>
+                    <div id="text2" class="hidden-text">Additional information for Accessoires 2.</div>
+                </li>
+                
+                <li>
+                    <img src="photos/fashion.png" alt="fashion">
+                    <a href="javascript:void(0)" onclick="toggleText(3)">Accessoires</a>
+                    <br>
+                    <div id="text3" class="hidden-text">Additional information for Accessoires 2.</div>
+                </li>
+                
+                <li>
+                    <img src="photos/fashion.png" alt="fashion">
+                    <a href="javascript:void(0)" onclick="toggleText(4)">Accessoires</a>
+                    <br>
+                    <div id="text4" class="hidden-text">Additional information for Accessoires 2.</div>
+                </li>
+                
+                <li>
+                    <img src="photos/fashion.png" alt="fashion">
+                    <a href="javascript:void(0)" onclick="toggleText(5)">Accessoires</a>
+                    <br>
+                    <div id="text5" class="hidden-text">Additional information for Accessoires 2.</div>
+                </li>
+                <li>
+                    <img src="photos/fashion.png" alt="fashion">
+                    <a href="javascript:void(0)" onclick="toggleText(6)">Accessoires</a>
+                    <br>
+                    <div id="text6" class="hidden-text">Additional information for Accessoires 2.</div>
+                </li>
+                <li>
+                    <img src="photos/fashion.png" alt="fashion">
+                    <a href="javascript:void(0)" onclick="toggleText(7)">Accessoires</a>
+                    <br>
+                    <div id="text7" class="hidden-text">Additional information for Accessoires 2.</div>
+                </li>
+                
+            </ul>
            
             <div class="slide">
                 <img src="photos/pic.png" alt="image" class="pic">
@@ -273,32 +312,5 @@
         </div>
     </footer>
 </body>
-<script>
-  const nav = document.getElementById("menu");
-const searchIcon = document.getElementById("searchIcon");
-const navOpenBtn = document.getElementById("navOpenBtn");
-const navCloseBtn = document.querySelector(".navCloseBtn");
-
-searchIcon.addEventListener("click", () => {
-    nav.classList.toggle("openSearch");
-    nav.classList.remove("openNav");
-    if (nav.classList.contains("openSearch")) {
-        searchIcon.classList.replace("uil-search", "uil-times");
-    } else {
-        searchIcon.classList.replace("uil-times", "uil-search");
-    }
-});
-
-navOpenBtn.addEventListener("click", () => {
-    nav.classList.add("openNav");
-    nav.classList.remove("openSearch");
-    searchIcon.classList.replace("uil-times", "uil-search");
-});
-
-navCloseBtn.addEventListener("click", () => {
-    nav.classList.remove("openNav");
-});
-
-
-</script>
+<script src="script.js"></script>
 </html>
