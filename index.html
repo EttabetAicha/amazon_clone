@@ -7,10 +7,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&family=Open+Sans:wght@300&display=swap"rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&family=Open+Sans:wght@300&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <title>Amazon</title>
-   
+
 </head>
 
 <body>
@@ -18,11 +19,11 @@
         <img src="photos/Amazon.png" alt="logo">
         <div class="search" id="searchIcon">
             <a href="products.html">
-            <input type="text" placeholder="Cherchez un produit, une marque ou catégorie..."></a>
+                <input type="text" placeholder="Cherchez un produit, une marque ou catégorie..."></a>
         </div>
         <nav class="menu" id="menu">
             <ul>
-                <li class="navCloseBtn"><i class="uil uil-times" ></i></li>
+                <li class="navCloseBtn"><i class="uil uil-times"></i></li>
                 <li><a href="#">Sign In</a></li>
                 <li class="border-left"><a href="#">Create Account</a></li>
                 <li><img src="photos/Morocco.png" alt="Morocco"></li>
@@ -33,61 +34,23 @@
         </nav>
         <i class="uil uil-bars navOpenBtn" id="navOpenBtn"></i>
     </header>
-    
-    
+
+
 
     <main>
         <section class="products-type">
-            
-            <ul>
-                <li>
-                    <img src="photos/fashion.png" alt="fashion">
-                    <a href="javascript:void(0)" onclick="toggleText(1)">Accessoires</a>
-                    <br>
-                    <div id="text1" class="hidden-text">Additional information for Accessoires 1.</div>
-                </li>
-                <li>
-                    <img src="photos/fashion.png" alt="fashion">
-                    <a href="javascript:void(0)" onclick="toggleText(2)">Accessoires</a>
-                    <br>
-                    <div id="text2" class="hidden-text">Additional information for Accessoires 2.</div>
-                </li>
-                
-                <li>
-                    <img src="photos/fashion.png" alt="fashion">
-                    <a href="javascript:void(0)" onclick="toggleText(3)">Accessoires</a>
-                    <br>
-                    <div id="text3" class="hidden-text">Additional information for Accessoires 2.</div>
-                </li>
-                
-                <li>
-                    <img src="photos/fashion.png" alt="fashion">
-                    <a href="javascript:void(0)" onclick="toggleText(4)">Accessoires</a>
-                    <br>
-                    <div id="text4" class="hidden-text">Additional information for Accessoires 2.</div>
-                </li>
-                
-                <li>
-                    <img src="photos/fashion.png" alt="fashion">
-                    <a href="javascript:void(0)" onclick="toggleText(5)">Accessoires</a>
-                    <br>
-                    <div id="text5" class="hidden-text">Additional information for Accessoires 2.</div>
-                </li>
-                <li>
-                    <img src="photos/fashion.png" alt="fashion">
-                    <a href="javascript:void(0)" onclick="toggleText(6)">Accessoires</a>
-                    <br>
-                    <div id="text6" class="hidden-text">Additional information for Accessoires 2.</div>
-                </li>
-                <li>
-                    <img src="photos/fashion.png" alt="fashion">
-                    <a href="javascript:void(0)" onclick="toggleText(7)">Accessoires</a>
-                    <br>
-                    <div id="text7" class="hidden-text">Additional information for Accessoires 2.</div>
-                </li>
-                
+            <button id="clickToShowList">Click to show</button>
+            <ul id="accessoriesList">
+                <li><img src="photos/fashion.png" alt="fashion"><a href="product.html">Accessoires</a></li>
+                <li><img src="photos/fashion.png" alt="fashion"><a href="product.html">Accessoires</a></li>
+                <li><img src="photos/fashion.png" alt="fashion"><a href="product.html">Accessoires</a></li>
+                <li><img src="photos/fashion.png" alt="fashion"><a href="product.html">Accessoires</a></li>
+                <li><img src="photos/fashion.png" alt="fashion"><a href="product.html">Accessoires</a></li>
+                <li><img src="photos/fashion.png" alt="fashion"><a href="product.html">Accessoires</a></li>
+                <li><img src="photos/fashion.png" alt="fashion"><a href="product.html">Accessoires</a></li>
+                <li><img src="photos/fashion.png" alt="fashion"><a href="product.html">Accessoires</a></li>
             </ul>
-           
+
             <div class="slide">
                 <img src="photos/pic.png" alt="image" class="pic">
             </div>
@@ -97,7 +60,8 @@
             <div class="info-product">
 
                 <div class="product">
-                    <img src="photos/145pcs Bamboo Forest Theme Keycap Set, Retro Green Keycaps, PBT Keycap, Cherry Keycap, Mechanical Keyboard Keycap, Minimalism Keyboard Decor.jpeg" alt="">
+                    <img src="photos/145pcs Bamboo Forest Theme Keycap Set, Retro Green Keycaps, PBT Keycap, Cherry Keycap, Mechanical Keyboard Keycap, Minimalism Keyboard Decor.jpeg"
+                        alt="">
                 </div>
                 <div class="desc">
                     <span>$1200</span> <span class="chiffre">$2600 <div class="drop-price"></div></span>
@@ -300,17 +264,18 @@
         </section>
     </main>
     <footer>
-        
-            <ul>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Support</a></li>
-                <li><a href="#">FQA</a></li>
-            </ul>
-        
+
+        <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Support</a></li>
+            <li><a href="#">FQA</a></li>
+        </ul>
+
         <div class="edition">
             Copyright 2023
         </div>
     </footer>
 </body>
 <script src="script.js"></script>
+
 </html>

@@ -70,13 +70,24 @@ header .menu ul{
 
 
 /*page index*/
-.hidden-text {
-  border-top: 1px solid #9e9e9e77;;
+#clickToShowList{
   display: none;
-  margin-top: 6px;
-  font-size: medium;
+  border: none;
+  padding: 12px;
+  width:40%;
+  border-radius: 15px;
+  margin-bottom: 12px;
   font-weight: bold;
-  color: rgb(255, 136, 0);
+  color: #fff;
+  background: linear-gradient(0deg, rgba(195,107,34,1) 0%, rgba(253,156,45,1) 100%);
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+#clickToShowList:hover {
+  background: linear-gradient(0deg, rgba(253, 156, 45, 1) 0%, rgba(195, 107, 34, 1) 100%);
+  padding: 15px;
 }
 .products-type{
   margin: 20px 50px;
@@ -834,6 +845,7 @@ input[type="checkbox"]:checked::before {
   margin-top: 20px;
 }
 .count-pro .count{
+  cursor: pointer;
   text-align: center;
     width: 35px;
     color: white;
@@ -846,6 +858,7 @@ input[type="checkbox"]:checked::before {
   
 }
 .count-pro .count-2{
+  cursor: pointer;
   text-align: center;
     width: 35px;
     color: white;
@@ -919,7 +932,9 @@ input[type="checkbox"]:checked::before {
 
   nav.openNav ul {
       right: 0;
+      cursor: pointer;
   }
+  
 
   nav .navOpenBtn {
       display: block;
@@ -944,7 +959,10 @@ input[type="checkbox"]:checked::before {
 
 
 @media only screen and (max-width: 600px){
- 
+  .hidden-text {
+    font-size: small;
+    padding: 5px;
+}
   .products-type ul li{
       height: 26px;
       padding: 14px;
@@ -959,6 +977,12 @@ input[type="checkbox"]:checked::before {
    } 
    .border-left{
     border-left: none;
+  }
+  #clickToShowList{
+    display: block;
+  }
+  #accessoriesList{
+    display: none;
   }
   h2{
       font-size: 24px;
