@@ -15,16 +15,16 @@
         <img src="photos/Amazon.png" alt="logo">
         <div class="search" id="searchIcon">
             <a href="products.html">
-            <input type="text" placeholder="Cherchez un produit, une marque ou catégorie..."></a>
+                <input type="text" placeholder="Cherchez un produit, une marque ou catégorie..."></a>
         </div>
         <nav class="menu" id="menu">
             <ul>
-                <li class="navCloseBtn"><i class="uil uil-times" ></i></li>
+                <li class="navCloseBtn"><i class="uil uil-times"></i></li>
                 <li><a href="#">Sign In</a></li>
                 <li class="border-left"><a href="#">Create Account</a></li>
                 <li><img src="photos/Morocco.png" alt="Morocco"></li>
                 <li>MAR</li>
-                <li id="navOpenPanier"><img src="photos/Shopping Cart.png" class="store" alt="store"></li>
+                <li id="navOpenPanier" style="cursor: pointer;"><img src="photos/Shopping Cart.png" class="store" alt="store"></li>
                 <li>5</li>
             </ul>
         </nav>
@@ -47,7 +47,7 @@
                         <div class="pro-details">
                             <div class="pro-name">Amazing Computer Accessories</div>
                             <div class="pro-payment-method">Selected Virement</div>
-                            <p class="pro-price">$200</p>
+                            <p class="pro-price" id="appliedCount1">$200</p>
                         </div>
                     </div>
 
@@ -56,11 +56,11 @@
                             <img src="photos/heart.png" alt="Add to favorites">
                             <img src="photos/ic_outline-delete.png" alt="Remove from cart">
                         </div>
-                        <div class="pro-quantity">
-                            <div class="quantity-control" style="color: #fff;;
-                            font-family: cursive;">-</div>
-                            <span class="quantity-value">1</span>
-                            <div class="quantity-control" style="background-color:#9c9c9c ;color: #fff;">+</div>
+                        <div class="count-pro" style="display: flex;">
+                            <div class="count" data-product="1">-</div>
+                            <span id="countValue1" data-product="1"
+                                style="font-size: large; font-weight: bold;">1</span>
+                            <div class="count-2" data-product="1">+</div>
                         </div>
                     </div>
                 </li>
@@ -71,7 +71,7 @@
                         <div class="pro-details">
                             <div class="pro-name">Amazing Computer Accessories</div>
                             <div class="pro-payment-method">Selected Virement</div>
-                            <p class="pro-price">$200</p>
+                            <p class="pro-price" id="appliedCount2">$399</p>
                         </div>
                     </div>
 
@@ -80,12 +80,12 @@
                             <img src="photos/heart.png" alt="Add to favorites">
                             <img src="photos/ic_outline-delete.png" alt="Remove from cart">
                         </div>
-                        <div class="pro-quantity">
-                            <div class="quantity-control" style="color: #fff;;
-                            font-family: cursive;">-</div>
-                            <span class="quantity-value">1</span>
-                            <div class="quantity-control" style="background-color:#9c9c9c ;color: #fff;">+</div>
-                        </div>
+                            <div class="count-pro" style="display: flex;">
+                                <div class="count" data-product="2">-</div>
+                                <span id="countValue2" data-product="2"
+                                    style="font-size: large; font-weight: bold;">1</span>
+                                <div class="count-2" data-product="2">+</div>
+                            </div>
                     </div>
                 </li>
                 <li class="pro-item">
@@ -95,7 +95,7 @@
                         <div class="pro-details">
                             <div class="pro-name">Amazing Computer Accessories</div>
                             <div class="pro-payment-method">Selected Virement</div>
-                            <p class="pro-price">$200</p>
+                            <p class="pro-price" id="appliedCount3">$300</p>
                         </div>
                     </div>
 
@@ -104,22 +104,25 @@
                             <img src="photos/heart.png" alt="Add to favorites">
                             <img src="photos/ic_outline-delete.png" alt="Remove from cart">
                         </div>
-                        <div class="pro-quantity">
-                            <div class="quantity-control" style="color: #fff;;
-                            font-family: cursive;">-</div>
-                            <span class="quantity-value">1</span>
-                            <div class="quantity-control" style="background-color:#9c9c9c ;color: #fff;">+</div>
+                        <div class="count-pro" style="display: flex;">
+                            <div class="count" data-product="3">-</div>
+                            <span id="countValue3" data-product="3"
+                                style="font-size: large; font-weight: bold;">1</span>
+                            <div class="count-2" data-product="3">+</div>
                         </div>
                     </div>
                 </li>
 
             </ul>
         </div>
+        <div  class="more-dtl"  >
+            <span style="font-weight: bolder;">Total: </span>
+            <span id="total">899$</span>
+        </div>
         <a href="panier.html" class="more-dtl">More Details</a>
     </div>
 
     <div id="overlay"></div>
-
    <main>
     <h1>Contactez Nous</h1>
     <section class="contact">

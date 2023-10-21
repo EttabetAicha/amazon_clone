@@ -1,24 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
-
     <meta name="description" content="Page d'accuelle ">
     <link rel="stylesheet" href="css/style.css">
     <title>Panier</title>
 </head>
+
 <body>
     <header>
         <img src="photos/Amazon.png" alt="logo">
         <div class="search" id="searchIcon">
             <a href="products.html">
-            <input type="text" placeholder="Cherchez un produit, une marque ou catégorie..."></a>
+                <input type="text" placeholder="Cherchez un produit, une marque ou catégorie..."></a>
         </div>
         <nav class="menu" id="menu">
             <ul>
-                <li class="navCloseBtn"><i class="uil uil-times" ></i></li>
+                <li class="navCloseBtn"><i class="uil uil-times"></i></li>
                 <li><a href="#">Sign In</a></li>
                 <li class="border-left"><a href="#">Create Account</a></li>
                 <li><img src="photos/Morocco.png" alt="Morocco"></li>
@@ -35,81 +36,88 @@
                 <div class="border-bottom">
                     <div class="first-select">
                         <input type="checkbox" class="check" checked>
-                        <span style="padding-left: 12px;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;font-weight: bold;">Select All Products</span>
-                    </div> 
-                </div>
-                <div class="produit_selected">
-                    <div class="prd_image">
-                        <div   style="margin: 20px 0; margin-left: 10px;">
-                            <input type="checkbox" class="check" checked>
-                        </div> 
-                        <img src="photos/Custom Coiled Keyboard USB Cable with Aviator Connector - GMK Dracula.jpeg" alt="clavie">
-                        <div class="btn-container">
-                        <div class="nm">Amazing Computer Accessories</div>
-                        <div class="btn">Selected Virement</div>
-                        <p class="mont">200$</p>
-                    </div>
-                    </div>
-                    
-                    <div class="react">
-                        <div class="icon-panier"  >
-                            <img src="photos/heart.png" alt="heart" style="width: 26px;">
-                            <img src="photos/ic_outline-delete.png" alt="delet" style="width: 30px;">
-                        </div>
-                        <div class="count-pro">
-                            <div class="count" onclick="decrementCount('section3')">-</div>
-                            <span id="countValue3" style="font-size: large; font-weight: bold;">1</span>
-                            <div class="count-2" onclick="incrementCount('section3')">+</div>
-                        </div>
+                        <span
+                            style="padding-left: 12px;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;font-weight: bold;">Select
+                            All Products</span>
                     </div>
                 </div>
                 <div class="produit_selected">
                     <div class="prd_image">
-                        <div   style="margin: 20px 0; margin-left: 10px;">
+                        <div style="margin: 20px 0; margin-left: 10px;">
                             <input type="checkbox" class="check" checked>
-                        </div> 
-                        <img src="photos/Custom Coiled Keyboard USB Cable with Aviator Connector - GMK Dracula.jpeg" alt="clavie">
+                        </div>
+                        <img src="photos/Custom Coiled Keyboard USB Cable with Aviator Connector - GMK Dracula.jpeg"
+                            alt="clavie">
                         <div class="btn-container">
-                        <div class="nm">Amazing Computer Accessories</div>
-                        <div class="btn">Selected Virement</div>
-                        <p class="mont">200$</p>
+                            <div class="nm">Amazing Computer Accessories</div>
+                            <div class="btn">Selected Virement</div>
+                            <p class="mont">200$</p>
+                        </div>
                     </div>
-                    </div>
-                    
+
                     <div class="react">
-                        <div class="icon-panier"  >
+                        <div class="icon-panier">
                             <img src="photos/heart.png" alt="heart" style="width: 26px;">
                             <img src="photos/ic_outline-delete.png" alt="delet" style="width: 30px;">
                         </div>
+
                         <div class="count-pro">
-                            <div class="count" onclick="decrementCount('section2')">-</div>
-                            <span id="countValue2" style="font-size: large; font-weight:bold;">1</span>
-                            <div class="count-2" onclick="incrementCount('section2')">+</div>
+                            <div class="count" data-product="1">-</div>
+                            <span id="countValue1" data-product="1" style="font-size: large; font-weight: bold;">1</span>
+                            <div class="count-2" data-product="1">+</div>
                         </div>
                     </div>
                 </div>
                 <div class="produit_selected">
                     <div class="prd_image">
-                        <div   style="margin: 20px 0; margin-left: 10px;">
+                        <div style="margin: 20px 0; margin-left: 10px;">
                             <input type="checkbox" class="check" checked>
-                        </div> 
-                        <img src="photos/Custom Coiled Keyboard USB Cable with Aviator Connector - GMK Dracula.jpeg" alt="clavie">
+                        </div>
+                        <img src="photos/Custom Coiled Keyboard USB Cable - GMK Taro.jpeg"
+                            alt="clavie">
                         <div class="btn-container">
-                        <div class="nm">Amazing Computer Accessories</div>
-                        <div class="btn">Selected Virement</div>
-                        <p class="mont">200$</p>
+                            <div class="nm">Amazing Computer Accessories</div>
+                            <div class="btn">Selected Virement</div>
+                            <p class="mont">399$</p>
+                        </div>
                     </div>
-                    </div>
-                    
+
                     <div class="react">
-                        <div class="icon-panier"  >
+                        <div class="icon-panier">
+                            <img src="photos/heart.png" alt="heart" style="width: 26px;">
+                            <img src="photos/ic_outline-delete.png" alt="delet" style="width: 30px;">
+                        </div>
+
+                        <div class="count-pro">
+                            <div class="count" data-product="2">-</div>
+                            <span id="countValue2" data-product="2" style="font-size: large; font-weight: bold;">1</span>
+                            <div class="count-2" data-product="2">+</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="produit_selected">
+                    <div class="prd_image">
+                        <div style="margin: 20px 0; margin-left: 10px;">
+                            <input type="checkbox" class="check" checked>
+                        </div>
+                        <img src="photos/Navy Blue Space Themed PBT Keycap Set for Mechanical Keyboard - 134 Key Caps Cherry Profile - MX Switch Compatible.jpeg"
+                            alt="clavie">
+                        <div class="btn-container">
+                            <div class="nm">Amazing Computer Accessories</div>
+                            <div class="btn">Selected Virement</div>
+                            <p class="mont">300$</p>
+                        </div>
+                    </div>
+
+                    <div class="react">
+                        <div class="icon-panier">
                             <img src="photos/heart.png" alt="heart" style="width: 26px;">
                             <img src="photos/ic_outline-delete.png" alt="delet" style="width: 30px;">
                         </div>
                         <div class="count-pro">
-                            <div class="count" onclick="decrementCount('section1')">-</div>
-                            <span id="countValue1" style="font-size: large; font-weight: bold;">1</span>
-                            <div class="count-2" onclick="incrementCount('section1')">+</div>
+                            <div class="count" data-product="3">-</div>
+                            <span id="countValue3" data-product="3" style="font-size: large; font-weight: bold;">1</span>
+                            <div class="count-2" data-product="3">+</div>
                         </div>
                     </div>
                 </div>
@@ -125,28 +133,33 @@
                     <span>Mouse</span>
                     <span id="appliedCount2">399$</span>
                 </div>
-                <div style="font-weight: bolder;color: black;"><span>Total</span><span>599$</span></div>
+                <div>
+                    <span>cable</span>
+                    <span id="appliedCount3">300$</span>
+                </div>
+                <div style="font-weight: bolder;color: black;"><span>Total</span><span id="total">899$</span></div>
                 <button>Checkout</button>
                 <h3>Payment Method </h3>
                 <div style="margin-bottom: 33px;">
-                    <img src="photos/master.png" alt="" style="width: 288px;" >
-                    
+                    <img src="photos/master.png" alt="" style="width: 288px;">
+
                 </div>
             </div>
         </section>
     </main>
     <footer>
-        
+
         <ul>
             <li><a href="#">About</a></li>
             <li><a href="#">Support</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
             <li><a href="#">FQA</a></li>
         </ul>
-    
-    <div class="edition">
-        Copyright 2023
-    </div>
-</footer>
+
+        <div class="edition">
+            Copyright 2023
+        </div>
+    </footer>
 </body>
 <script src="script.js"></script>
 
