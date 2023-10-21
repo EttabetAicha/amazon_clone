@@ -22,13 +22,102 @@
                 <li class="border-left"><a href="#">Create Account</a></li>
                 <li><img src="photos/Morocco.png" alt="Morocco"></li>
                 <li>MAR</li>
-                <li><a href="panier.html"><img src="photos/Shopping Cart.png" class="store" alt="store"></a></li>
+                <li id="navOpenPanier"><img src="photos/Shopping Cart.png" class="store" alt="store"></li>
                 <li>5</li>
             </ul>
         </nav>
+
         <i class="uil uil-bars navOpenBtn" id="navOpenBtn"></i>
     </header>
-    
+    <div class="sidebar" id="sidebar">
+        <div class="cart-header">
+            <h2>Panier d'achat</h2>
+            <button class="close-btn" id="closeSidebarBtn" style="margin-right: 100px;">
+                <i class="uil uil-times"></i>
+            </button>
+        </div>
+        <div class="cart-content">
+            <ul class="pro-list">
+                <li class="pro-item">
+                    <div class="pro-info">
+                        <img src="photos/Custom Coiled Keyboard USB Cable with Aviator Connector - GMK Dracula.jpeg"
+                            alt="clavie">
+                        <div class="pro-details">
+                            <div class="pro-name">Amazing Computer Accessories</div>
+                            <div class="pro-payment-method">Selected Virement</div>
+                            <p class="pro-price">$200</p>
+                        </div>
+                    </div>
+
+                    <div class="pro-actions">
+                        <div class="pro-icons">
+                            <img src="photos/heart.png" alt="Add to favorites">
+                            <img src="photos/ic_outline-delete.png" alt="Remove from cart">
+                        </div>
+                        <div class="pro-quantity">
+                            <div class="quantity-control" style="color: #fff;;
+                            font-family: cursive;">-</div>
+                            <span class="quantity-value">1</span>
+                            <div class="quantity-control" style="background-color:#9c9c9c ;color: #fff;">+</div>
+                        </div>
+                    </div>
+                </li>
+                <li class="pro-item">
+                    <div class="pro-info">
+                        <img src="photos/Custom Coiled Keyboard USB Cable with Aviator Connector - GMK Dracula.jpeg"
+                            alt="clavie">
+                        <div class="pro-details">
+                            <div class="pro-name">Amazing Computer Accessories</div>
+                            <div class="pro-payment-method">Selected Virement</div>
+                            <p class="pro-price">$200</p>
+                        </div>
+                    </div>
+
+                    <div class="pro-actions">
+                        <div class="pro-icons">
+                            <img src="photos/heart.png" alt="Add to favorites">
+                            <img src="photos/ic_outline-delete.png" alt="Remove from cart">
+                        </div>
+                        <div class="pro-quantity">
+                            <div class="quantity-control" style="color: #fff;;
+                            font-family: cursive;">-</div>
+                            <span class="quantity-value">1</span>
+                            <div class="quantity-control" style="background-color:#9c9c9c ;color: #fff;">+</div>
+                        </div>
+                    </div>
+                </li>
+                <li class="pro-item">
+                    <div class="pro-info">
+                        <img src="photos/Custom Coiled Keyboard USB Cable with Aviator Connector - GMK Dracula.jpeg"
+                            alt="clavie">
+                        <div class="pro-details">
+                            <div class="pro-name">Amazing Computer Accessories</div>
+                            <div class="pro-payment-method">Selected Virement</div>
+                            <p class="pro-price">$200</p>
+                        </div>
+                    </div>
+
+                    <div class="pro-actions">
+                        <div class="pro-icons">
+                            <img src="photos/heart.png" alt="Add to favorites">
+                            <img src="photos/ic_outline-delete.png" alt="Remove from cart">
+                        </div>
+                        <div class="pro-quantity">
+                            <div class="quantity-control" style="color: #fff;;
+                            font-family: cursive;">-</div>
+                            <span class="quantity-value">1</span>
+                            <div class="quantity-control" style="background-color:#9c9c9c ;color: #fff;">+</div>
+                        </div>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+        <a href="panier.html" class="more-dtl">More Details</a>
+    </div>
+
+    <div id="overlay"></div>
+
     <main>
         <section class="container">
             <aside>
