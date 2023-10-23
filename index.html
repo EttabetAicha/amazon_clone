@@ -8,29 +8,12 @@
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&family=Open+Sans:wght@300&display=swap"
-        rel="stylesheet">
+    rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
     <title>Amazon</title>
-    <style>
-        .slide {
-            overflow: hidden;
-            position: relative;
-        }
+  
 
-        .slide ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            transition: transform 1s ease;
-            /* Use transform for smooth sliding animation */
-        }
-
-        .slide li {
-            flex: 0 0 100%;
-            /* Ensure each image takes up the full width of the container */
-        }
-    </style>
 </head>
 
 <body>
@@ -71,14 +54,14 @@
                         <div class="pro-details">
                             <div class="pro-name">Amazing Computer Accessories</div>
                             <div class="pro-payment-method">Selected Virement</div>
-                            <p class="pro-price" id="appliedCount1">$200</p>
+                            <p class="pro-price" id="appliedCount1">200 $</p>
                         </div>
                     </div>
 
                     <div class="pro-actions">
                         <div class="pro-icons">
                             <img src="photos/heart.png" alt="Add to favorites">
-                            <img src="photos/ic_outline-delete.png" alt="Remove from cart">
+                            <img src="photos/ic_outline-delete.png" alt="Remove from cart" class="remove-pro">
                         </div>
                         <div class="count-pro" style="display: flex;">
                             <div class="count" data-product="1">-</div>
@@ -95,14 +78,14 @@
                         <div class="pro-details">
                             <div class="pro-name">Amazing Computer Accessories</div>
                             <div class="pro-payment-method">Selected Virement</div>
-                            <p class="pro-price" id="appliedCount2">$399</p>
+                            <p class="pro-price" id="appliedCount2">399 $</p>
                         </div>
                     </div>
 
                     <div class="pro-actions">
                         <div class="pro-icons">
-                            <img src="photos/heart.png" alt="Add to favorites">
-                            <img src="photos/ic_outline-delete.png" alt="Remove from cart">
+                            <img src="photos/heart.png" alt="Add to favorites" >
+                            <img src="photos/ic_outline-delete.png" alt="Remove from cart" class="remove-pro">
                         </div>
                         <div class="count-pro" style="display: flex;">
                             <div class="count" data-product="2">-</div>
@@ -119,14 +102,14 @@
                         <div class="pro-details">
                             <div class="pro-name">Amazing Computer Accessories</div>
                             <div class="pro-payment-method">Selected Virement</div>
-                            <p class="pro-price" id="appliedCount3">$300</p>
+                            <p class="pro-price" id="appliedCount3">300 $</p>
                         </div>
                     </div>
 
                     <div class="pro-actions">
                         <div class="pro-icons">
                             <img src="photos/heart.png" alt="Add to favorites">
-                            <img src="photos/ic_outline-delete.png" alt="Remove from cart">
+                            <img src="photos/ic_outline-delete.png" alt="Remove from cart" class="remove-pro" >
                         </div>
                         <div class="count-pro" style="display: flex;">
                             <div class="count" data-product="3">-</div>
@@ -152,30 +135,32 @@
         <section class="products-type">
             <button id="clickToShowList">Click to show</button>
             <ul id="accessoriesList">
-                <li><img src="photos/fashion.png" alt="fashion"><a href="product.html">Accessoires</a></li>
-                <li><img src="photos/fashion.png" alt="fashion"><a href="product.html">Accessoires</a></li>
-                <li><img src="photos/fashion.png" alt="fashion"><a href="product.html">Accessoires</a></li>
-                <li><img src="photos/fashion.png" alt="fashion"><a href="product.html">Accessoires</a></li>
-                <li><img src="photos/fashion.png" alt="fashion"><a href="product.html">Accessoires</a></li>
-                <li><img src="photos/fashion.png" alt="fashion"><a href="product.html">Accessoires</a></li>
-                <li><img src="photos/fashion.png" alt="fashion"><a href="product.html">Accessoires</a></li>
-                <li><img src="photos/fashion.png" alt="fashion"><a href="product.html">Accessoires</a></li>
+                <li><img class="Acc" src="photos/fashion.png" alt="fashion"><a href="product.html">Accessoires</a></li>
+                <li><img class="Acc"src="photos/fashion.png" alt="fashion"><a href="product.html">Accessoires</a></li>
+                <li><img class="Acc"src="photos/fashion.png" alt="fashion"><a href="product.html">Accessoires</a></li>
+                <li><img class="Acc"src="photos/fashion.png" alt="fashion"><a href="product.html">Accessoires</a></li>
+                <li><img class="Acc"src="photos/fashion.png" alt="fashion"><a href="product.html">Accessoires</a></li>
+                <li><img class="Acc"src="photos/fashion.png" alt="fashion"><a href="product.html">Accessoires</a></li>
+                <li><img class="Acc"src="photos/fashion.png" alt="fashion"><a href="product.html">Accessoires</a></li>
+                <li><img class="Acc"src="photos/fashion.png" alt="fashion"><a href="product.html">Accessoires</a></li>
             </ul>
+            <div class="swiper-container-wrapper">
 
-            <div class="slide">
-
-                <ul>
-                    <li><img src="photos/picc1.jpeg" style="width: 70%;" alt="1st image"></li>
-                    <li><img src="photos/picc2.jpeg" style="width: 70%;" alt="2nd image"></li>
-                    <li><img src="photos/picc3.jpeg" style="width: 70%;" alt="3rd image"></li>
-                    <li><img src="photos/picc4.jpeg" style="width: 70%;" alt="4th image"></li>
-                    <li><img src="photos/Modern Keyboard.jpeg" style="width: 70%;" alt="4th image"></li>
-                    <li><img src="photos/145pcs Bamboo Forest Theme Keycap Set, Retro Green Keycaps, PBT Keycap, Cherry Keycap, Mechanical Keyboard Keycap, Minimalism Keyboard Decor.jpeg"
-                            style="width: 70%;" alt="4th image"></li>
-                </ul>
-
-            </div>
+            <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" navigation="true" space-between="30"
+            centered-slides="true" autoplay-delay="2500" autoplay-disable-on-interaction="false">
+            <swiper-slide><img class="pic-slide" src="photos/145pcs Bamboo Forest Theme Keycap Set, Retro Green Keycaps, PBT Keycap, Cherry Keycap, Mechanical Keyboard Keycap, Minimalism Keyboard Decor.jpeg"  alt=""></swiper-slide>
+            <swiper-slide><img class="pic-slide" src="photos/145pcs Bamboo Forest Theme Keycap Set, Retro Green Keycaps, PBT Keycap, Cherry Keycap, Mechanical Keyboard Keycap, Minimalism Keyboard Decor.jpeg" alt=""></swiper-slide>
+            <swiper-slide><img class="pic-slide" src="photos/145pcs Bamboo Forest Theme Keycap Set, Retro Green Keycaps, PBT Keycap, Cherry Keycap, Mechanical Keyboard Keycap, Minimalism Keyboard Decor.jpeg" alt=""></swiper-slide>
+            <swiper-slide><img class="pic-slide" src="photos/145pcs Bamboo Forest Theme Keycap Set, Retro Green Keycaps, PBT Keycap, Cherry Keycap, Mechanical Keyboard Keycap, Minimalism Keyboard Decor.jpeg" alt=""></swiper-slide>
+            <swiper-slide><img class="pic-slide" src="photos/145pcs Bamboo Forest Theme Keycap Set, Retro Green Keycaps, PBT Keycap, Cherry Keycap, Mechanical Keyboard Keycap, Minimalism Keyboard Decor.jpeg" alt=""></swiper-slide>
+            <swiper-slide><img class="pic-slide" src="photos/145pcs Bamboo Forest Theme Keycap Set, Retro Green Keycaps, PBT Keycap, Cherry Keycap, Mechanical Keyboard Keycap, Minimalism Keyboard Decor.jpeg" alt=""></swiper-slide>
+            <swiper-slide><img class="pic-slide" src="photos/145pcs Bamboo Forest Theme Keycap Set, Retro Green Keycaps, PBT Keycap, Cherry Keycap, Mechanical Keyboard Keycap, Minimalism Keyboard Decor.jpeg" alt=""></swiper-slide>
+            <swiper-slide><img class="pic-slide" src="photos/145pcs Bamboo Forest Theme Keycap Set, Retro Green Keycaps, PBT Keycap, Cherry Keycap, Mechanical Keyboard Keycap, Minimalism Keyboard Decor.jpeg" alt=""></swiper-slide>
+            <swiper-slide><img class="pic-slide" src="photos/145pcs Bamboo Forest Theme Keycap Set, Retro Green Keycaps, PBT Keycap, Cherry Keycap, Mechanical Keyboard Keycap, Minimalism Keyboard Decor.jpeg" alt=""></swiper-slide>
+          </swiper-container>
+          </div>
         </section>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"></script>
         <h2>#Best Remise</h2>
         <section class="list-products">
             <div class="info-product">
@@ -368,7 +353,7 @@
                         </div>
                         <div class="content-product">
                             <span class="sold">sold</span>
-                            <a href="#"><img class="add-pro" src="photos/Shopping Mall.png" alt="shop"> </a>
+                            <a href=""><img class="add-pro" src="photos/Shopping Mall.png" alt="shop"> </a>
                         </div>
 
                     </div>
@@ -400,47 +385,9 @@
 </body>
 
 <script src="script.js"></script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script>
-    $(document).ready(function () {
-        var currentIndex = 0;
-        var items = $('.slide li');
-        var itemAmt = items.length;
-        var slideWidth = items.outerWidth();
 
-        function cycleItems() {
-            var item = items.eq(currentIndex);
-            var slideContainer = $('.slide ul');
-            slideContainer.css('transform', 'translateX(' + (-currentIndex * slideWidth) + 'px)');
-        }
 
-        $('#prev').click(function () {
-            currentIndex -= 1;
-            if (currentIndex < 0) {
-                currentIndex = itemAmt - 1;
-            }
-            cycleItems();
-        });
 
-        $('#next').click(function () {
-            currentIndex += 1;
-            if (currentIndex >= itemAmt) {
-                currentIndex = 0;
-            }
-            cycleItems();
-        });
-
-        var autoSlide = setInterval(function () {
-            currentIndex += 1;
-            if (currentIndex >= itemAmt) {
-                currentIndex = 0;
-            }
-            cycleItems();
-        }, 3000);
-
-        cycleItems();
-    });
-</script>
 
 
 </html>

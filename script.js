@@ -8,6 +8,8 @@ const sidebar = document.getElementById("sidebar");
 const openSidebarBtn = document.getElementById("navOpenPanier");
 const closeSidebarBtn = document.getElementById("closeSidebarBtn");
 const overlay = document.getElementById("overlay");
+const swiperContainerWrapper = document.querySelector(".swiper-container-wrapper");
+const removepro=document.querySelectorAll(".remove-pro");
 const productCounts = {
   1: 1,
   2: 1,
@@ -70,12 +72,16 @@ openSidebarBtn.addEventListener("click", () => {
   sidebar.style.right = "0";
   overlay.style.display = "block";
   document.body.classList.add("blurred");
+  swiperContainerWrapper.classList.add("blurred-container");
+
+ 
 });
 
 closeSidebarBtn.addEventListener("click", () => {
   sidebar.style.right = "-100%";
   overlay.style.display = "none";
   document.body.classList.remove("blurred");
+  swiperContainerWrapper.classList.remove("blurred-container");
 });
 clickToShowList.addEventListener("click", function () {
   if (
@@ -106,4 +112,28 @@ navOpenBtn.addEventListener("click", () => {
 
 navCloseBtn.addEventListener("click", () => {
   nav.classList.remove("openNav");
+});
+removepro.forEach(button => {
+  button.addEventListener("click", () => {
+    const product = button.closest('.pro-item');
+    if (product) {
+      // Find the product price within the product element
+      const productPriceElement = product.querySelector(".pro-price");
+      if (productPriceElement) {
+        const productPrice = parseFloat(productPriceElement.innerText);
+        
+        // Update the total price correctly by subtracting the product price
+        const totalElement = document.getElementById("total");
+        const currentTotal = Number(totalElement.innerText.replace("$", ""));
+        const newTotal = currentTotal - productPrice;
+
+        totalElement.innerText = newTotal.toFixed(2) + "$";
+
+        product.classList.add("removing");
+        product.addEventListener("transitionend", () => {
+          product.remove();
+        });
+      }
+    }
+  });
 });
