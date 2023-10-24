@@ -9,6 +9,8 @@ body.blurred {
 }
 .blurred-container {
   filter: blur(5px);
+  -webkit-filter: blur(5px);
+ 
 }
 
 #overlay {
@@ -33,6 +35,7 @@ background: #fff;
 display: flex;
 justify-content: center;
 align-items: center;
+height: 88%;
 }
 
 
@@ -41,6 +44,14 @@ display: block;
 width: 100%;
 height: 100%;
 object-fit: cover;
+}
+.swiper-pagination{
+margin-bottom: 55px;
+}
+svg, .swiper-button-prev svg {
+ 
+  margin-left: -17px;
+ 
 }
 /*header for all pages*/
 header {
@@ -332,7 +343,8 @@ header .menu ul {
 .products-type {
   margin: 20px 50px;
   display: grid;
-  grid-template-columns: 23% 70%;
+  grid-template-columns: 22% 61%;
+  grid-gap: 177px;
 }
 .products-type .Acc {
   width: 25px;
@@ -1191,14 +1203,22 @@ input[type="checkbox"]:checked::before {
   .navCloseBtn {
     display: block;
   }
+  .border-left {
+    border-left:none;
+    
+  }
 }
 
 @media only screen and (max-width: 600px) {
   footer ul {
-    
+    padding: 15px;
+    gap: 61px;
     margin-bottom:3px;
   }
- 
+  footer .edition {
+    
+    bottom: -3px;
+}
   .products-type ul li {
     /* height: 26px; */
     padding: 14px;
@@ -1228,6 +1248,7 @@ input[type="checkbox"]:checked::before {
   }
   .products-type {
     grid-template-columns: 100%;
+    grid-gap: 0;
   }
   .list-products {
     grid-template-columns: 100%;

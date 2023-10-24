@@ -9,18 +9,16 @@ const openSidebarBtn = document.getElementById("navOpenPanier");
 const closeSidebarBtn = document.getElementById("closeSidebarBtn");
 const overlay = document.getElementById("overlay");
 const swiperContainerWrapper = document.querySelector(".swiper-container-wrapper");
-const removepro=document.querySelectorAll(".remove-pro");
+const removepro = document.querySelectorAll(".remove-pro");
 const productCounts = {
   1: 1,
   2: 1,
   3: 1,
-
 };
 const productPrices = {
   1: 200,
   2: 399,
   3: 300,
- 
 };
 function updateProduct(product, increment) {
   if (productCounts[product] > 1 || (increment && productCounts[product] < 5)) {
@@ -61,10 +59,9 @@ function updateTotalPrice() {
   const total = Object.keys(productCounts).reduce((acc, product) => {
     const productCount = productCounts[product];
     const productPrice = productPrices[product];
-    const productTotal = productCount*productPrice;
+    const productTotal = productCount * productPrice;
     return acc + productTotal;
   }, 0);
-
 
   totalElement.innerText = total + "$";
 }
@@ -73,8 +70,6 @@ openSidebarBtn.addEventListener("click", () => {
   overlay.style.display = "block";
   document.body.classList.add("blurred");
   swiperContainerWrapper.classList.add("blurred-container");
-
- 
 });
 
 closeSidebarBtn.addEventListener("click", () => {
@@ -113,15 +108,15 @@ navOpenBtn.addEventListener("click", () => {
 navCloseBtn.addEventListener("click", () => {
   nav.classList.remove("openNav");
 });
-removepro.forEach(button => {
+removepro.forEach((button) => {
   button.addEventListener("click", () => {
-    const product = button.closest('.pro-item');
+    const product = button.closest(".pro-item");
     if (product) {
       // Find the product price within the product element
       const productPriceElement = product.querySelector(".pro-price");
       if (productPriceElement) {
         const productPrice = parseFloat(productPriceElement.innerText);
-        
+
         // Update the total price correctly by subtracting the product price
         const totalElement = document.getElementById("total");
         const currentTotal = Number(totalElement.innerText.replace("$", ""));
