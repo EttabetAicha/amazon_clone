@@ -10,6 +10,36 @@ const closeSidebarBtn = document.getElementById("closeSidebarBtn");
 const overlay = document.getElementById("overlay");
 const swiperContainerWrapper = document.querySelector(".swiper-container-wrapper");
 const removepro = document.querySelectorAll(".remove-pro");
+document.getElementById('myForm').addEventListener('submit', function(event) {
+  event.preventDefault();
+  const fullName = document.getElementById('fullName').value;
+  const email = document.getElementById('email').value;
+  const confirmEmail = document.getElementById('confirmEmail').value;
+  const message = document.getElementById('message').value;
+  const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+  const nameRegex = /^[a-zA-Z ]{1,30}$/;
+  if (fullName.trim() === "") {
+      alert("Nom complet est requis");
+      return;
+  }
+if (!nameRegex.test(fullName)) {
+    alert("Nom complet doit contenir au maximum 30 lettres.");
+    return;
+}
+  if (!email.match(emailRegex)) {
+      alert("Adresse email invalide");
+      return;
+  }
+  if (email !== confirmEmail) {
+      alert("Les adresses email ne correspondent pas");
+      return;
+  }
+  if (message.trim() === "" || message === "Message") {
+      alert("Message est requis");
+      return;
+  }
+  alert("Formulaire soumis avec succès!");
+});
 const productCounts = {
   1: 1,
   2: 1,
