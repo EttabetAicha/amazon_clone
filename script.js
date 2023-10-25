@@ -8,38 +8,11 @@ const sidebar = document.getElementById("sidebar");
 const openSidebarBtn = document.getElementById("navOpenPanier");
 const closeSidebarBtn = document.getElementById("closeSidebarBtn");
 const overlay = document.getElementById("overlay");
-const swiperContainerWrapper = document.querySelector(".swiper-container-wrapper");
+const swiperContainerWrapper = document.querySelector(
+  ".swiper-container-wrapper"
+);
 const removepro = document.querySelectorAll(".remove-pro");
-document.getElementById('myForm').addEventListener('submit', function(event) {
-  event.preventDefault();
-  const fullName = document.getElementById('fullName').value;
-  const email = document.getElementById('email').value;
-  const confirmEmail = document.getElementById('confirmEmail').value;
-  const message = document.getElementById('message').value;
-  const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-  const nameRegex = /^[a-zA-Z ]{1,30}$/;
-  if (fullName.trim() === "") {
-      alert("Nom complet est requis");
-      return;
-  }
-if (!nameRegex.test(fullName)) {
-    alert("Nom complet doit contenir au maximum 30 lettres.");
-    return;
-}
-  if (!email.match(emailRegex)) {
-      alert("Adresse email invalide");
-      return;
-  }
-  if (email !== confirmEmail) {
-      alert("Les adresses email ne correspondent pas");
-      return;
-  }
-  if (message.trim() === "" || message === "Message") {
-      alert("Message est requis");
-      return;
-  }
-  alert("Formulaire soumis avec succès!");
-});
+
 const productCounts = {
   1: 1,
   2: 1,
@@ -101,14 +74,13 @@ openSidebarBtn.addEventListener("click", () => {
   document.body.classList.add("blurred");
   swiperContainerWrapper.classList.add("blurred-container");
 });
-
 closeSidebarBtn.addEventListener("click", () => {
   sidebar.style.right = "-100%";
   overlay.style.display = "none";
   document.body.classList.remove("blurred");
   swiperContainerWrapper.classList.remove("blurred-container");
 });
-clickToShowList.addEventListener("click", function () {
+clickToShowList?.addEventListener("click", function () {
   if (
     accessoriesList.style.display === "none" ||
     accessoriesList.style.display === ""
@@ -161,4 +133,35 @@ removepro.forEach((button) => {
       }
     }
   });
+});
+document.getElementById("myForm").addEventListener("submit", function (event) {
+  event.preventDefault();
+  const fullName = document.getElementById("fullName").value;
+  const email = document.getElementById("email").value;
+  const confirmEmail = document.getElementById("confirmEmail").value;
+  const message = document.getElementById("message").value;
+  const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+  // /^[a-zA-Z0-9._-]+@gmail+\.(com|ma)$/;
+  const nameRegex = /^[a-zA-Z ]{1,30}$/;
+  if (fullName.trim() === "") {
+    alert("Nom complet est requis");
+    return;
+  }
+  if (!nameRegex.test(fullName)) {
+    alert("Nom complet doit contenir au maximum 30 lettres.");
+    return;
+  }
+  if (!email.match(emailRegex)) {
+    alert("Adresse email invalide");
+    return;
+  }
+  if (email !== confirmEmail) {
+    alert("Les adresses email ne correspondent pas");
+    return;
+  }
+  if (message.trim() === "" || message === "Message") {
+    alert("Message est requis");
+    return;
+  }
+  alert("Formulaire soumis avec succès!");
 });
