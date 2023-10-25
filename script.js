@@ -118,7 +118,6 @@ removepro.forEach((button) => {
       const productPriceElement = product.querySelector(".pro-price");
       if (productPriceElement) {
         const productPrice = parseFloat(productPriceElement.innerText);
-
         // Update the total price correctly by subtracting the product price
         const totalElement = document.getElementById("total");
         const currentTotal = Number(totalElement.innerText.replace("$", ""));
@@ -165,3 +164,4 @@ document.getElementById("myForm").addEventListener("submit", function (event) {
   }
   alert("Formulaire soumis avec succès!");
 });
+

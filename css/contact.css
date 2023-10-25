@@ -159,7 +159,7 @@ body.blurred {
   height: 100%;
   background-color: #ffffff;
   box-shadow: -1px 0 5px rgba(0, 0, 0, 0.2);
-  transition: right 1.4s ease;
+  transition: all 0.4s ease;
   -webkit-transition: right 1.4s ease;
   -moz-transition: right 1.4s ease;
   -ms-transition: right 1.4s ease;
@@ -407,6 +407,11 @@ textarea {
 @media (max-width: 768px) {
   header .search {
     display: none;
+  }
+  .sidebar {
+  
+    width: 99%;
+   
   }
 
   header nav {
